@@ -19,7 +19,7 @@ public class FAQTest {
         this.answerText = answerText;
     }
 
-    @Parameterized.Parameters //Поле
+    @Parameterized.Parameters
     public static Object[][] getFAQData() {
         return new Object[][] {
                 {0, 0, "Сутки — 400 рублей. Оплата курьеру — наличными или картой."},

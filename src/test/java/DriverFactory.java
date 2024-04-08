@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class DriverFactory extends ExternalResource {
     private WebDriver driver;
 
-    @Override //Поле
+    @Override
     protected void before() throws Throwable {
         initDriver();
         driver.get("https://qa-scooter.praktikum-services.ru/");

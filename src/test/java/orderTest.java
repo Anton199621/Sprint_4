@@ -37,21 +37,17 @@ public class orderTest {
                 {"Down", "Сергей", "Силкин", "Тишинка 5", 9, "+79995139642", "04", "сутки"},
         };
     }
-
-    public enum OrderDirection { //Поле
-        UP,
-        DOWN
-    }
-    @Test
+@Test
     public void orderTest() {
         OrderPage objOrderPage = new OrderPage(driverFactory.getDriver());
         HomePage objHomePage = new HomePage(driverFactory.getDriver());
 
-        if (buttonChoose == OrderDirection.UP) {
-            objHomePage.clickOrderUpButton();
-        } else {
-            objHomePage.clickOrderDownButton();
-        }
+    OrderDirection orderDirection = OrderDirection.valueOf(buttonChoose.toUpperCase());
+    if (orderDirection == OrderDirection.UP) {
+        objHomePage.clickOrderUpButton();
+    } else {
+        objHomePage.clickOrderDownButton();
+    }
 
         objOrderPage.order(name, family, adres, metroPoint, number, data, period);
 
