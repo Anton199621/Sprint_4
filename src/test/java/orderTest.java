@@ -7,7 +7,7 @@ import pages.homePage;
 import pages.orderPage;
 
 @RunWith(Parameterized.class)
-public class orderTest {
+public class OrderTest {
     @Rule
     public DriverFactory driverFactory = new DriverFactory();
     private final String name;
@@ -19,7 +19,7 @@ public class orderTest {
     private final String buttonChoose;
     private final int metroPoint;
 
-    public orderTest(String buttonChoose, String name, String family, String adres, int metroPoint, String number, String data, String period) {
+    public OrderTest(String buttonChoose, String name, String family, String adres, int metroPoint, String number, String data, String period) {
         this.buttonChoose = buttonChoose;
         this.name = name;
         this.adres = adres;
